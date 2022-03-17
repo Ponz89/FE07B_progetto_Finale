@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
+## installation
+
+npm i
+npm i bootstrap
+
+creare un nuovo utente ed accedere.
+usare l'utente: admin password: 111111 ed accedere.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
