@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - npm i bootstrap
 
 - creare un nuovo utente ed accedere.
-- usare l'utente: admin password: 111111 ed accedere.
+- oppure usare l'utente: admin password: 111111 ed accedere.
 
 ## Development server
 
