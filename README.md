@@ -1,14 +1,6 @@
-# PROGETTO FINALE
+# PROGETTOFINALE
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
-
-# installation
-
-- npm i
-- npm i bootstrap
-
-- creare un nuovo utente ed accedere.
-- oppure usare l'utente: admin password: 111111 ed accedere.
 
 ## Development server
 
