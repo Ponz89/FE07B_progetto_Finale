@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClientiService } from '../services/clienti.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Fattura } from '../_models/Fattura';
-import { Cliente } from '../_models/Cliente';
+import { Fattura } from '../_models/fattura';
+import { Cliente } from '../_models/cliente';
 
 @Component({
   template: `
@@ -95,42 +95,48 @@ import { Cliente } from '../_models/Cliente';
                     </button>
                   </div>
                   <div class="col-3">
-                    <button class="btn btn-danger" (click)="eliminaCliente(this.cliente.id)">Elimina cliente</button>
+                    <button
+                      class="btn btn-danger"
+                      (click)="eliminaCliente(this.cliente.id)"
+                    >
+                      Elimina cliente
+                    </button>
                   </div>
                 </div>
                 <hr />
-                <div class="container mt-5">
-                  <div class="row">
-                    <div class="col-4 mt-3" *ngFor="let fattura of fatture">
-                      <div
-                        class="card text-white bg-secondary"
-                        style="width: 18rem; border: 1px solid white"
-                      >
-                        <div class="card-body">
-                          <h5 class="card-title">{{ fattura.name }}</h5>
-                          <h6 class="card-subtitle mb-2">
-                            {{ fattura.cliente.ragioneSociale }}
-                          </h6>
-                          <p class="card-text">
-                            Importo: {{ fattura.importo }} €
-                          </p>
-                          <p class="card-text">
-                            Stato Fattura : {{ fattura.stato.nome }}
-                          </p>
-                          <p class="card-text">ID unico: {{ fattura.id }}</p>
-                          <p class="card-text">
-                            Data : {{ fattura.data | date: 'd/M/yy, h:mm a' }}
-                          </p>
+                <div class="container">
+                  <table class="table text-white bg-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Numero</th>
+                        <th scope="col">Anno</th>
+                        <th scope="col">Importo</th>
+                        <th scope="col">Stato</th>
+                        <th scope="col">Cliente</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let fattura of fatture; let i = index">
+                      <tr>
+                        <th scope="row">{{ fattura.id }}</th>
+                        <td>{{ fattura.data | date }}</td>
+                        <td>{{ fattura.numero }}</td>
+                        <td>{{ fattura.anno }}</td>
+                        <td>{{ fattura.importo }}€</td>
+                        <td>{{ fattura.stato.nome }}</td>
+                        <td>{{ fattura.cliente.ragioneSociale }}</td>
+                        <td>
                           <a
                             [routerLink]="['/dettaglifattura/', fattura.id]"
                             routerLinkActive="router-link-active"
-                            class="btn btn-primary btn-sm"
+                            class="btn btn-primary btn-sm m-2"
                             >Dettagli Fattura</a
                           >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -220,25 +226,24 @@ import { Cliente } from '../_models/Cliente';
   `,
   styles: [
     `
-    .cartella{
-      opacity: .95;
-      margin-top: 5rem !important;
-      margin-bottom: 5rem !important;
-    }
-
-  `
+      .cartella {
+        opacity: 0.95;
+        margin-top: 5rem !important;
+        margin-bottom: 5rem !important;
+      }
+    `,
   ],
 })
 export class DettagliclientePage implements OnInit {
   cliente!: any;
   fatture!: any;
   nuovaFattura!: Fattura;
-  data!:number;
+  data!: number;
   constructor(
     private clientiSrv: ClientiService,
     private route: ActivatedRoute,
     private modalService: NgbModal,
-    private router:Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -282,14 +287,13 @@ export class DettagliclientePage implements OnInit {
       this.mostraFatture(this.cliente.id);
     });
   }
-  eliminaCliente(data:number){
-    this.clientiSrv.eliminaFatture(data).subscribe((res)=>{
-      this.clientiSrv.eliminaCliente(data).subscribe((bene)=>{
+  eliminaCliente(data: number) {
+    this.clientiSrv.eliminaFatture(data).subscribe((res) => {
+      this.clientiSrv.eliminaCliente(data).subscribe((bene) => {
         console.log(bene);
         alert('Cliente eliminato!');
         this.router.navigate(['/clienti']);
-    })
-  })
-
-}
+      });
+    });
+  }
 }

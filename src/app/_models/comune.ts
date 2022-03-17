@@ -1,4 +1,4 @@
-import { Provincia } from './Provincia';
+import { Provincia } from './provincia';
 
 export class Comune {
   id!: number;

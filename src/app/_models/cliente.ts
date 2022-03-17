@@ -1,5 +1,5 @@
-import { Comune } from './Comune';
-import { Sede } from './Sede';
+import { Comune } from './comune';
+import { Sede } from './sede';
 
 export class Cliente {
   id!: number;

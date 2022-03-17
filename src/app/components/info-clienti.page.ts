@@ -76,6 +76,7 @@ export class InfoClientiPage implements OnInit {
   p: number = 0;
   k!: number;
   ngOnInit(): void {
+
     this.clientiSrv.getAll(this.p).subscribe((res) => {
       this.clienti = res.content;
       this.p = Number(res.pageable.pageNumber);
@@ -117,3 +118,4 @@ export class InfoClientiPage implements OnInit {
     this.router.navigate(['creacliente']);
   }
 }
+

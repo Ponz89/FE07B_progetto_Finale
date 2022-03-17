@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Fattura } from '../_models/Fattura';
+import { Fattura } from '../_models/fattura';
 import { FatturaService } from '../services/fattura.service';
 import { StatoFattura } from '../_models/statoFattura';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';

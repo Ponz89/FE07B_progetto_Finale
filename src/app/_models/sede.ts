@@ -1,4 +1,4 @@
-import { Comune } from './Comune';
+import { Comune } from './comune';
 
 export class Sede {
   id!: number;

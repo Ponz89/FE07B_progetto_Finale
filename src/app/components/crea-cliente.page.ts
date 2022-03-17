@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClientiService } from '../services/clienti.service';
-import { Cliente } from '../_models/Cliente';
-import { Comune } from '../_models/Comune';
-import { Provincia } from '../_models/Provincia';
+import { Cliente } from '../_models/cliente';
+import { Comune } from '../_models/comune';
+import { Provincia } from '../_models/provincia';
 
 @Component({
   template: `

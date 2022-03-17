@@ -15,7 +15,7 @@ import { AuthGuardGuard } from '../_guard/auth-guard.guard';
           <div class="navbar-nav">
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link mx-3"
                 aria-current="page"
                 [routerLink]="['/']"
                 routerLinkActive="active"
@@ -25,7 +25,7 @@ import { AuthGuardGuard } from '../_guard/auth-guard.guard';
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link mx-3"
                 [routerLink]="['login']"
                 routerLinkActive="active"
                 [hidden]="this.authSrv.loggedIn()"
@@ -34,7 +34,7 @@ import { AuthGuardGuard } from '../_guard/auth-guard.guard';
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link mx-3"
                 [routerLink]="['signup']"
                 routerLinkActive="active"
                 [hidden]="this.authSrv.loggedIn()"
@@ -43,7 +43,7 @@ import { AuthGuardGuard } from '../_guard/auth-guard.guard';
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link mx-3"
                 [routerLink]="['fatture']"
                 routerLinkActive="active"
                 >Fatture</a
@@ -51,7 +51,7 @@ import { AuthGuardGuard } from '../_guard/auth-guard.guard';
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link mx-3"
                 [routerLink]="['clienti']"
                 routerLinkActive="active"
                 >Clienti</a
@@ -59,7 +59,7 @@ import { AuthGuardGuard } from '../_guard/auth-guard.guard';
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link mx-3"
                 [routerLink]="['users']"
                 routerLinkActive="active"
                 >Users</a
