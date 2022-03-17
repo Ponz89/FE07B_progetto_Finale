@@ -4,11 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## installation
 
-. npm i
-. npm i bootstrap
+1 npm i
+2 npm i bootstrap
 
-. creare un nuovo utente ed accedere.
-. usare l'utente: admin password: 111111 ed accedere.
+3 creare un nuovo utente ed accedere.
+4 usare l'utente: admin password: 111111 ed accedere.
 
 ## Development server
 
