@@ -3,7 +3,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { loginUtente } from '../_models/loginUtente';
 import { Users } from '../_models/user';
 import { environment } from 'src/environments/environment';
-import { AdminLogin } from '../_models/AdminLogin';
+import { AdminLogin } from '../_models/adminLogin';
 
 @Injectable({
   providedIn: 'root'
