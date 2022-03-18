@@ -44,6 +44,7 @@ import { Router } from '@angular/router';
         opacity: .95;
         margin-top: 5rem !important;
       }
+      
     `,
   ],
 })
