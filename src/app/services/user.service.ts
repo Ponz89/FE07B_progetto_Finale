@@ -9,7 +9,9 @@ import { environment } from 'src/environments/environment';
 export class UserService {
   myApiUrl:string = environment.pathApi;
   constructor(private http:HttpClient) { }
- getAll(){
-  return this.http.get<any>(this.myApiUrl + '/api/users');
+ getAll(p: number){
+  return this.http.get<any>(
+    this.myApiUrl + '/api/users?page=' + p + '&size=20&sort=id,ASC'
+    );
  }
 }

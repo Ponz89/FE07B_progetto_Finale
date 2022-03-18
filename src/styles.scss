@@ -4,10 +4,25 @@
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+
 body {
   background-image: url("../src/assets/img/sfondo.jpg");
   background-size: 100vw;
   background-attachment: fixed;
   background-position: center;
+  font-family: 'Roboto Mono', monospace;
+
 }
 
+.btn-primary {
+  background-color: rgba(0, 255, 0, 0.712);
+  color: black;
+  border-color: black;
+  &:hover{
+    background-color: rgba(0, 255, 0, 0.315);
+    color: rgba(0, 255, 0, 0.712);
+    border-color: rgba(0, 255, 0, 0.712);
+  };
+}
